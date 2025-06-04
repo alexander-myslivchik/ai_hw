@@ -1,0 +1,60 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hamburger {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    transform: translateY(-150%);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    z-index: 1000;
+    transition: 0.3s ease; 
+ /* PATCH: Hide the menu visually and from interaction when closed */
+    /* opacity: 0;
+    pointer-events: none;    
+    transition: transform 0.3s ease; */
+
+  }
+  .menu.open {
+    transform: translateY(0);
+    /* opacity: 1;
+    pointer-events: auto; */
+  }
+} 
+
+/* Optionally, ensure .menu is always visible on desktop */
+@media (min-width: 769px) {
+  .menu {
+    position: static;
+    flex-direction: row;
+    background: none;
+    box-shadow: none;
+    transform: none;
+    opacity: 1;
+    pointer-events: auto;
+    transition: none;
+  }
+}
