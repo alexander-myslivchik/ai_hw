@@ -1,9 +1,9 @@
-import MenuContainer from "./MenuContainer/MenuContainer";
+import Dashboard from "./DashboardContainer/DashboardContainer";
 
 function App() {
   return (
     <main className="h-full overflow-auto">
-      <MenuContainer/>
+      <Dashboard/>
     </main>
   );
 }
