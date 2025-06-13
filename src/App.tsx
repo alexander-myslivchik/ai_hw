@@ -1,9 +1,9 @@
-import Dashboard from "./DashboardContainer/DashboardContainer";
+import Testimonials from "./Testimonials/Testimonials";
 
 function App() {
   return (
-    <main className="h-full overflow-auto">
-      <Dashboard/>
+    <main className="min-h-screen bg-white">
+      <Testimonials/>
     </main>
   );
 }

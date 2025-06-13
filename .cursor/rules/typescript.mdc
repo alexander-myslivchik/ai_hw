@@ -1,0 +1,87 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# TypeScript Development Standards
+
+## Documentation Requirements
+
+All functions and classes must have proper JSDoc documentation.
+
+### Why?
+- Improves code maintainability
+- Provides better IDE support
+- Makes code self-documenting
+- Helps generate API documentation
+
+### Rules:
+- Add JSDoc comments above all functions and classes
+- Include description of what the function/class does
+- Document all parameters with types and descriptions
+- Document return types and possible exceptions
+- Use examples for complex functionality
+
+### Example:
+```typescript
+/**
+ * Checks if a number is even
+ * @param {number} num - Number to check
+ * @returns {boolean} True if the number is even
+ */
+function isEven(num: number): boolean {
+    return num % 2 === 0;
+}
+```
+
+## Type Safety
+
+### Why?
+- Catches errors at compile time
+- Improves code reliability
+- Makes refactoring safer
+- Provides better IDE support
+
+### Rules:
+- Always use explicit return types
+- Avoid using 'any' type
+- Enable strict TypeScript checks
+- Use interfaces for object shapes
+- Use generics when appropriate
+
+### Example:
+```typescript
+interface UserData {
+    id: number;
+    name: string;
+    email: string;
+}
+
+function getUser(id: number): Promise<UserData> {
+    // Implementation
+}
+```
+
+## Naming Conventions
+
+### Rules:
+- Use camelCase for functions and variables
+- Use PascalCase for classes and interfaces
+- Use UPPER_CASE for constants
+- Use descriptive names that explain purpose
+
+### Examples:
+```typescript
+// Good
+function calculateTotal() {}
+class UserProfile {}
+const MAX_RETRY_COUNT = 3;
+
+// Bad
+function Calculate_total() {}
+class userProfile {}
+```
+
+@typescript-examples.ts
+
+
